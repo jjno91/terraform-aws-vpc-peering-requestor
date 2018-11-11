@@ -3,7 +3,7 @@ resource "aws_vpc_peering_connection" "this" {
   peer_vpc_id   = "${var.peer_vpc_id}"
   peer_owner_id = "${var.peer_owner_id}"
   peer_region   = "${var.peer_region}"
-  tags          = "${merge(map("Name", "${var.env}-peer-${var.peer_env}"), var.tags)}"
+  tags          = "${merge(map("Name", "${var.env}-peer-${var.peer_env}"), map("Type", "Requester"), var.tags)}"
 }
 
 resource "aws_route" "this" {
