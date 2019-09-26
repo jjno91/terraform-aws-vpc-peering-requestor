@@ -37,6 +37,7 @@ resource "aws_security_group_rule" "ingress" {
 }
 
 resource "aws_security_group_rule" "egress" {
+  count             = "${var.create ? 1 : 0}"
   description       = "Egress peer CIDR"
   type              = "egress"
   from_port         = 0
