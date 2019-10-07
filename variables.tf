@@ -42,3 +42,13 @@ variable "peer_vpc_cidr_block" {
   description = "CIDR block associated with the peer VPC"
   default     = ""
 }
+
+variable "create" {
+  description = "Controls if all resources should be created or not."
+  default     = true
+}
+
+variable "route_count" {
+  description = "Number of routes to create"
+  default     = 0
+}
