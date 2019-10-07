@@ -47,3 +47,8 @@ variable "create" {
   description = "Controls if all resources should be created or not."
   default     = true
 }
+
+variable "route_count" {
+  description = "Number of routes to create"
+  default     = 0
+}
